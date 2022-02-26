@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import LogoImg from "../../images/logos/boldtechlogo2.png";
+import LogoImg from "../../images/logos/logo.png";
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../responsive";
 
@@ -11,8 +11,8 @@ const BrandLogoContainer = styled.div`
 `;
 
 const LogoImage = styled.div`
-    width: ${({size}) => (size ? size + "px" : "4em")};
-    height: ${({size}) => (size ? size + "px" : "4em")};
+    width: ${({size}) => (size ? size + "px" : "2em")};
+    height: ${({size}) => (size ? size + "px" : "2em")};
 
     img {
         width: 100%;

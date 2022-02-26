@@ -3,10 +3,11 @@ import styled from "styled-components";
 import { BrandLogo } from "../../components/brandLogo";
 import { deviceSize } from "../../components/responsive";
 import whiteningSoap from "../../images/whitening-soap.jpg";
+import { useMediaQuery } from "react-responsive";
+import { Button } from "../../components/button";
 
 const ProductsContainer = styled.div`
     width: 100%;
-    height: 500px;
     background:rgba(255,255,255, 0.3);
 `;
 
@@ -16,6 +17,7 @@ const InnerSection = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 20px;
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
         margin: 0;
@@ -36,6 +38,11 @@ const ProductsSection = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-around;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const ProductDescription = styled.div`
@@ -45,6 +52,10 @@ const ProductDescription = styled.div`
     align-items: center;
     padding-left: 50px;
     justify-content: center;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        padding: 0;
+    }
 `;
 
 const ProductTitle = styled.h2`
@@ -62,6 +73,12 @@ const ProductImage = styled.div`
     height: 24em;
     padding-top: 50px;
 
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        width: 14em;
+        height: 14em;
+        margin-bottom: 50px;
+    }
+
     img {
         width: 100%;
         height: 100%;
@@ -69,15 +86,21 @@ const ProductImage = styled.div`
 `;
 
 export function Products(props) {
+
+    const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile});
+
     return (
         <ProductsContainer>
             <InnerSection>
                 <Title>Featured</Title>
                 <ProductsSection>
                     <ProductDescription>
-                        <BrandLogo hideLogoTitle logoSize={120} />
+                        {!isMobile && (
+                        <BrandLogo logoSize={50} />
+                        )}
                         <ProductTitle>Whitening Soap</ProductTitle>
                         <Description>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Description>
+                        <Button>Read more</Button>
                     </ProductDescription>
                     <ProductImage>
                         <img src={ whiteningSoap} alt="whitening soap" />

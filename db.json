@@ -1,0 +1,28 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Whitening Cream",
+            "thumbnailUrl": "http://localhost:9000/product1.jpg",
+            "price": 100,
+            "purpose": "Gives you a clear skin",
+            "rating": 5
+        },
+        {
+            "id": 2,
+            "name": "Whitening Lotion",
+            "thumbnailUrl": "http://localhost:9000/product2.jpg",
+            "price": 40,
+            "purpose": "Gives you a clear skin",
+            "rating": 4
+        },
+        {
+            "id": 3,
+            "name": "Whitening Cream",
+            "thumbnailUrl": "http://localhost:9000/product3.jpg",
+            "price": 35,
+            "purpose": "Gives you a clear skin",
+            "rating": 3
+        }
+    ]
+}
