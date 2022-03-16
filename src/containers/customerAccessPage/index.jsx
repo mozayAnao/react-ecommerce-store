@@ -11,18 +11,6 @@ import {
 import { useParams } from "react-router-dom";
 import { ContactBar } from "../../components/contactBar";
 
-const PageWrapper = styled.div`
-    width: 100%;
-    min-height: 100%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #fff;
-    background-size: cover;
-;`
-
 const StyledInnerContainer = styled(InnerPageContainer)`
   padding-top: 4em;
 `;
