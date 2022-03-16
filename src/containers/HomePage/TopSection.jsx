@@ -9,7 +9,7 @@ import TopSectionImg from "../../images/topSectionImg.png";
 
 const TopSectionContainer = styled.div`
     width: 100%;
-    height: 800px;
+    height: 728px;
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
         height: 700px;
@@ -24,9 +24,14 @@ const TopSectionInnerContainer = styled.div`
     justify-content: space-evenly;
 `;
 
-const StandoutImage = styled.div`
+export const StandoutImage = styled.div`
     width: 44em;
     height: 34em;
+
+     @media screen and (max-width: ${deviceSize.mobile}px) {
+        width: 24em;
+        height: 24em;
+    }
 
     img {
         width: 100%;
@@ -34,7 +39,8 @@ const StandoutImage = styled.div`
     }
 `;
 
-const LogoContainer = styled.div`
+export const LogoContainer = styled.div`
+    width: ${({ width }) => (width ? width + "%" : "")};
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -44,7 +50,7 @@ const LogoContainer = styled.div`
     }
 `;
 
-const SloganLogoContainer = styled.div`
+export const SloganLogoContainer = styled.div`
     display: flex;
     align-items: flex-start;
     flex-direction: column;

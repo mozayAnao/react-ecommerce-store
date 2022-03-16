@@ -40,12 +40,12 @@ const ContentContainer = styled.div`
 `;
 
 const BottomContainer = styled.div`
-    ddisplay: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     height: 70px;
     border-top: 0.6px solid rgb(0, 0, 0, 0.3);
-    padding: 0 10px;
+    padding: 0 20px;
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
         padding: 0;
@@ -68,9 +68,9 @@ const Title = styled.h2`
     font-size: 20px;
 `;
 
-const FLink = styled(Link)`
+export const FLink = styled(Link)`
     text-decoration: none;
-    color: #6f6f6f;
+    color: ${({color}) => (color ? color : "#6f6f6f")};
     font-weight: 500;
     font-size: ${({size}) => (size ? size + "px" : "15px")};
     cursor: pointer;
@@ -94,7 +94,8 @@ const PrivacyText = styled.h6`
     }
 `;
 
-const SocialIcon = styled.div`
+export const SocialIcon = styled.div`
+    display: flex;
     color: #8a8a8a;
     font-size: 20px;
     cursor: pointer;

@@ -23,6 +23,30 @@
             "price": 35,
             "purpose": "Gives you a clear skin",
             "rating": 3
+        },
+        {
+            "id": 4,
+            "name": "Whitening Cream",
+            "thumbnailUrl": "http://localhost:9000/product3.jpg",
+            "price": 35,
+            "purpose": "Gives you a clear skin",
+            "rating": 3
+        },
+        {
+            "id": 5,
+            "name": "Whitening Cream",
+            "thumbnailUrl": "http://localhost:9000/product3.jpg",
+            "price": 35,
+            "purpose": "Gives you a clear skin",
+            "rating": 3
+        },
+        {
+            "id": 6,
+            "name": "Whitening Cream",
+            "thumbnailUrl": "http://localhost:9000/product3.jpg",
+            "price": 35,
+            "purpose": "Gives you a clear skin",
+            "rating": 3
         }
     ]
 }

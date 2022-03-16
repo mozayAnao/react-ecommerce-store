@@ -8,7 +8,7 @@ import { Button } from "../../components/button";
 
 const ProductsContainer = styled.div`
     width: 100%;
-    background:rgba(255,255,255, 0.3);
+    background:rgb(255,255,255);
 `;
 
 const InnerSection = styled.div`
@@ -25,9 +25,9 @@ const InnerSection = styled.div`
     }
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
     font-weight: 900;
-    color: #021514;
+    color: ${({ color }) => (color ? color : "#021514")};
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 25px;
@@ -38,6 +38,7 @@ const ProductsSection = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 50px;
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
         flex-direction: column;
@@ -63,9 +64,10 @@ const ProductTitle = styled.h2`
     color: #041f1e;
 `;
 
-const Description = styled.p`
+export const Description = styled.p`
     font-size: 15px;
-    color: #041f1e;
+    color:  ${({ color }) => (color ? color : "#041f1e")};
+    text-align: ${({ align }) => (align ? align : "left")};
 `;
 
 const ProductImage = styled.div`
@@ -96,7 +98,7 @@ export function Products(props) {
                 <ProductsSection>
                     <ProductDescription>
                         {!isMobile && (
-                        <BrandLogo logoSize={50} />
+                        <BrandLogo logoSize={50} color="#041f1e" />
                         )}
                         <ProductTitle>Whitening Soap</ProductTitle>
                         <Description>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Description>

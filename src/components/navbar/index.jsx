@@ -46,7 +46,7 @@ const AnchorLink = styled(Link)`
     }
 `;
 
-const Separator = styled.div`
+export const Separator = styled.div`
     min-height: 50%;
     width: 1px;
     background-color: #fff;
@@ -76,7 +76,7 @@ export function Navbar(props) {
                     <Button size={14}>Register</Button>
                 </Link>
                 <Marginer direction="horizontal" margin={8} />
-                <AnchorLink to="/customer/access.signin">Login</AnchorLink>
+                <AnchorLink to="/customer/access/signin">Login</AnchorLink>
             </AccessibilityContainer>
         </NavbarContainer>
     )

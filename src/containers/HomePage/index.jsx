@@ -1,4 +1,5 @@
 import React from 'react';
+import { ContactBar } from '../../components/contactBar';
 import { Footer } from '../../components/footer';
 import { Navbar } from '../../components/navbar';
 import { InnerPageContainer, PageContainer } from '../../components/PageContainer';
@@ -10,6 +11,7 @@ import { TopSection } from './TopSection';
 export function HomePage() {
     return <PageContainer>
         <InnerPageContainer>
+            <ContactBar />
             <Navbar useTransparent />
             <TopSection />
             <Products />
