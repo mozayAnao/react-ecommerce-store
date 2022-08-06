@@ -1,10 +1,10 @@
-import React, { createContext, useState } from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import { LoginForm } from "./loginForm";
-import { AccountContext } from "./context";
-import { SignupForm } from "./signupForm";
-import { MutedLink } from "./common";
+import React, { createContext, useState } from 'react';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { LoginForm } from './loginForm';
+import { AccountContext } from './context';
+import { SignupForm } from './signupForm';
+import { MutedLink } from './common';
 
 const BoxContainer = styled.div`
   width: 380px;
@@ -85,21 +85,21 @@ const InnerContainer = styled.div`
 
 const backdropVariants = {
   expanded: {
-    width: "233%",
-    height: "1050px",
-    borderRadius: "20%",
-    transform: "rotate(60deg)",
+    width: '233%',
+    height: '1050px',
+    borderRadius: '20%',
+    transform: 'rotate(60deg)',
   },
   collapsed: {
-    width: "160%",
-    height: "550px",
-    borderRadius: "50%",
-    transform: "rotate(60deg)",
+    width: '160%',
+    height: '550px',
+    borderRadius: '50%',
+    transform: 'rotate(60deg)',
   },
 };
 
 const expandingTransition = {
-  type: "spring",
+  type: 'spring',
   duration: 2.3,
   stiffness: 30,
 };
@@ -108,7 +108,7 @@ export function AccountBox(props) {
   const { initialActive } = props;
   const [isExpanded, setExpanded] = useState(false);
   const [active, setActive] = useState(
-    initialActive ? initialActive : "signin"
+    initialActive ? initialActive : 'signin'
   );
 
   const playExpandingEffect = () => {
@@ -128,12 +128,12 @@ export function AccountBox(props) {
 
   const switchToSignup = () => {
     playExpandingEffect();
-    switchActive("signup");
+    switchActive('signup');
   };
 
   const switchToSignin = () => {
     playExpandingEffect();
-    switchActive("signin");
+    switchActive('signin');
   };
 
   const contextValue = {
@@ -150,9 +150,9 @@ export function AccountBox(props) {
             variants={backdropVariants}
             transition={expandingTransition}
             initial={false}
-            animate={isExpanded ? "expanded" : "collapsed"}
+            animate={isExpanded ? 'expanded' : 'collapsed'}
           />
-          {active === "signin" && (
+          {active === 'signin' && (
             <>
               <HeaderContainer>
                 <HeaderText>Welcome</HeaderText>
@@ -161,7 +161,7 @@ export function AccountBox(props) {
               <SmallText>Please sign-in to continue!</SmallText>
             </>
           )}
-          {active === "signup" && (
+          {active === 'signup' && (
             <>
               <HeaderContainer>
                 <HeaderText>Create </HeaderText>
@@ -172,8 +172,8 @@ export function AccountBox(props) {
           )}
         </TopContainer>
         <InnerContainer>
-          {active === "signin" && <LoginForm />}
-          {active === "signup" && <SignupForm />}
+          {active === 'signin' && <LoginForm />}
+          {active === 'signup' && <SignupForm />}
         </InnerContainer>
       </BoxContainer>
     </AccountContext.Provider>
